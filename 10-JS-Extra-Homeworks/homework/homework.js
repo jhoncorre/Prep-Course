@@ -26,12 +26,12 @@ function numberOfCharacters(string) {
   //en formato par clave-valor.
   //Ej: Recibe ---> "adsjfdsfsfjsdjfhacabcsbajda" || Devuelve ---> { a: 5, b: 2, c: 2, d: 4, f: 4, h:1, j: 4, s: 5 } 
   //Escribe tu código aquí
-  var obj= {};
+  var obj = {};
   for (let i = 0; i < string.length; i++) {
-    if(!obj[string(i)]) {
-      obj[string(i)] = 0;
+    if(!obj[string[i]]) {
+      obj[string[i]] = 0;
     }
-    obj[string(i)] += 1;
+    obj[string[i]] += 1;
   }
   return obj;
 }
@@ -121,6 +121,15 @@ function buscoInterseccion(arreglo1, arreglo2){
   //Si no tienen elementos en común, retornar un arreglo vacío.
   //Aclaración: los arreglos no necesariamente tienen la misma longitud
   //Escribe tu código aquí 
+  var arreglo = [];
+  for(var i = 0; i < arreglo1.length; i++){
+    for(var j = 0; j < arreglo2.length; j++){
+      if(arreglo1[i] === arreglo2[j]){
+        arreglo.push(arreglo1[i])
+      }
+    }
+  }
+  return arreglo;
   
 
 }
